@@ -12,9 +12,9 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     // TODO: Steps 4 & 8 - Declare member variables here:
-    TextView mStory;
-    Button mTopButton;
-    Button mBottomButton;
+    private TextView mStory;
+    private Button mTopButton;
+    private Button mBottomButton;
 
     int mStoryTracker = 0;
 
@@ -33,8 +33,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 Log.d("Destini", "Top button clicked ");
-                boolean mTop = true;
-                updateStory(mTop);
+                updateStory(true);
             }
 
         });
@@ -43,8 +42,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.d("Destini", "Bottom button clicked ");
-                boolean mBottom = false;
-                updateStory(mBottom);
+                updateStory(false);
             }
         });
 
